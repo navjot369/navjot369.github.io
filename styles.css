@@ -6,7 +6,7 @@ html {
 }
 body{
     margin: 0;
-    background-color: #000;
+    background-color: #141414;
 }
 
 /* Top navigation bar*/
@@ -15,10 +15,11 @@ body{
     top: 0;
     left: 0;
     width: 100%;
+    z-index: 11;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #141414;
+    background-color: transparent;
 }
 #my-name-top {
     font-size: 1.5rem;
@@ -74,14 +75,21 @@ body{
 }
 
 /* This is details sections */
-.upper-details {
-    background-color: #000;
+.upper-ele {
+    position: sticky;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 47px;
+    margin: 0;
+}
+.up-details {
+    background-color: #000;
 }
 #details {
     width: 100%;
-    height: 100vh;
+    padding: 0;
+    min-height: 100vh;
     background-color: #1e3d59;
 }
 #details-title {
@@ -93,7 +101,9 @@ body{
 }
 .details-container {
     display: grid;
-    padding: 10px 20%;
+    max-width: 900px;
+    margin: auto;
+    padding: 10px 10px;
     gap: 10px 10px;
     grid-template-columns: 1fr 1fr;
 }
@@ -115,7 +125,7 @@ body{
     border-radius: 0 0 10px 10px;
 }
 #my-image img {
-    width: 17vw;
+    width: 200px;
     object-fit: cover;
     border-radius: 15px;
     box-shadow: 3px 3px;
@@ -169,7 +179,9 @@ body{
 }
 .edu-img {
     display: block;
-    width: 7vw;
+    width: 70px;
+    height: 70px;
+    object-fit: fill;
     border-radius: 2px;
 }
 .edu-name {
@@ -186,4 +198,44 @@ body{
     font-style: italic;
 }
 
+/* Skills Box */
+#skills-details {
+    background-color: #d8deeb;
+    grid-column: 2/3;
+    border-radius: 10px;
+    padding: 0 5px;
+}
+.skills-container {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+}
+.skill-item{
+    margin-bottom: 5px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+}
+.skill-item img {
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+    margin-left: 10px; 
+}
+.skill-item p {
+    font-size: 20px;
+    padding-left: 10px;
+}
 
+/* Projects section */
+#projects {
+    width: 100%;
+    height: 100vh;
+    padding: 0;
+    background-color: #cfb845;
+}
+.up-project {
+    background-color: #1e3d59;
+    box-shadow: 0 -10px 10px 10px #1e3d59;
+}
