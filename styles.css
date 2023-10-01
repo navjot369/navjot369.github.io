@@ -325,10 +325,6 @@ body{
     color: white;
     text-decoration: none;
 }
-.project-item-inner:hover .project-link {
-    animation-name: link-upper;
-    animation-duration: 5s;
-}
 
 /* Contact section */
 #contacts {
@@ -349,9 +345,9 @@ body{
 .contact-outer-div {
     display: flex;
     flex-direction: row;
-    width: 1000px;
+    max-width: 1000px;
     margin: 40px auto;
-    justify-content: space-between;
+    justify-content: space-evenly;
     align-items: center;
     flex-wrap: wrap;
 }
@@ -360,6 +356,7 @@ body{
     position: relative;
     border-radius: 12px;
     height: 350px;
+    margin-bottom: 12px;
 }
 .social-pro-cont:hover {
     box-shadow: 0 0 5px 2px #444;
@@ -383,7 +380,7 @@ body{
     flex-direction: column;
     justify-content: end;
     align-items: center;
-    background: linear-gradient(180deg, transparent, #1b1f23 60%);
+    background: linear-gradient(180deg, transparent, #1b1f23 50%);
 }
 .social-username {
     font-size: 1.1rem;
@@ -432,4 +429,97 @@ footer {
 }
 footer h3 {
     color: #eee;
+}
+
+@media (max-width: 600px) {
+    html{
+        font-size: 80%;
+    }
+    #navbar{
+        justify-content: center;
+    }
+    #my-name-top {
+        display: none;
+    }
+    .nav-links-container {
+        justify-content: center;
+    }
+    #welcome-section {
+        text-align: center;
+    }
+    #welcome-section div h1:last-child{
+        margin: unset;
+    }
+    #welcome-section div h1:last-child i {
+        display: block;
+    }
+}
+
+@media (max-width: 480px) {
+    
+    .details-container {
+        width: 100%;
+        max-width: unset;
+        grid-template-columns: 10px 1fr 10px;
+    }
+    .basic-details {
+        grid-column: 2/3;
+    }
+    #my-image img{
+        width: 90%;
+    }
+    .basic-details2{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    #education-details {
+        grid-column: 2/3;
+    }
+    #skills-details {
+        grid-column: 2/3;
+    }
+
+    .project-item-outer {
+        min-width: unset;
+        height: unset;
+        width: 100%;
+        margin-bottom: 15px;
+    }
+    .project-item-inner {
+        flex-direction: column;
+        width: 90%;
+        height: 90%;
+        border-radius: 15px;
+        justify-content: center;
+        padding-bottom: 1px;
+    }
+    .project-thumbnail-container {
+        width: 100%;
+        height: 10rem;
+        border-radius: 15px;
+    }
+    .project-thumbnail {
+        width: 100%;
+        border-radius: 15px 15px 0 0;
+    }
+    .project-info-section {
+        justify-content: center;
+        align-items: center;
+    }
+    .project-link {
+        margin: 15px 0;
+    }
+}
+@media (max-width: 350px) {
+    .social-pro-cont{
+        width: 90%;
+        background-color: #444;
+    }
+    .social-thumbnail {
+        width: 100%;
+    }
+    .social-inner-main {
+        background: linear-gradient(180deg, transparent, #1b1f23 40%);
+    }
 }
