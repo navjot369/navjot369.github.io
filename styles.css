@@ -16,7 +16,7 @@ body{
     top: 0;
     left: 0;
     width: 100%;
-    z-index: 11;
+    z-index: 20;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -83,6 +83,7 @@ body{
     width: 100%;
     height: 47px;
     margin: 0;
+    z-index: 19
 }
 .up-details {
     background-color: #000;
@@ -332,9 +333,103 @@ body{
 /* Contact section */
 #contacts {
     width: 100%;
-    height: 100vh;
+    padding-bottom: 50px;
     background-color: #f5f0e1;
 }
 .up-contact {
     background-color: #b20238 ;
+}
+#contact-title {
+    color: #1d3c45;
+    width: fit-content;
+    margin: 10px auto;
+    padding: 0 10px;
+    border-bottom: 3px solid #1d3c45;
+}
+.contact-outer-div {
+    display: flex;
+    flex-direction: row;
+    width: 1000px;
+    margin: 40px auto;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.social-pro-cont {
+    width: 300px;
+    position: relative;
+    border-radius: 12px;
+    height: 350px;
+}
+.social-pro-cont:hover {
+    box-shadow: 0 0 5px 2px #444;
+}
+.social-thumbnail {
+    width: 300px;
+    border-radius: 12px;
+}
+.social-thumbnail img {
+    width: 100%;
+    border-radius: 12px 12px 0 0;
+}
+.social-inner-main {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 350px;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: center;
+    background: linear-gradient(180deg, transparent, #1b1f23 60%);
+}
+.social-username {
+    font-size: 1.1rem;
+    color: white;
+    margin-bottom: 10px;
+}
+.social-link-outer {
+    width: 100%;
+    padding: 2px 24px;
+
+}
+.social-link-outer a {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.3rem;
+    color: #2867b2;
+    padding: 5px;
+    background-color: white;
+    text-decoration: none;
+    border-radius: 12px;
+}
+.social-logo {
+    height: 1.3rem;
+    margin: 0 3px 3px 0 ;
+}
+.social-tagline {
+    color: #aaa;
+    margin: 5px;
+    visibility: hidden;
+    transition: 200ms;
+}
+.social-pro-cont:hover .social-tagline {
+    visibility: visible;
+}
+
+#twitter-tagline, #github-tagline {
+    color: black;
+}
+footer {
+    color: white;
+    text-align: center;
+    padding: 20px 20px 40px;
+}
+footer h3 {
+    color: #eee;
 }
