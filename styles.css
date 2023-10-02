@@ -126,6 +126,11 @@ body{
     color: #eee;
     border-radius: 0 0 10px 10px;
 }
+#my-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 #my-image img {
     width: 200px;
     object-fit: cover;
@@ -464,6 +469,9 @@ footer h3 {
     }
     .basic-details {
         grid-column: 2/3;
+    }
+    #my-image {
+
     }
     #my-image img{
         width: 90%;
